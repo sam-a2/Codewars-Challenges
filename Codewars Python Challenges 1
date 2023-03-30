@@ -1,0 +1,167 @@
+#Q1 - Playing banjo
+'''Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+name + " plays banjo" 
+name + " does not play banjo"
+Names given are always valid strings.'''
+
+# Function that returns
+'''def are_you_playing_banjo(name):
+    #Checks if name starts with R or r and then returns appropriate string
+    
+    if name.startswith("R") or name.startswith("r"):
+        return name + " plays banjo"
+    else:
+        return name + " does not play banjo"
+
+are_you_playing_banjo("Jordan")'''
+
+# Function that prints
+'''def are_you_playing_banjo(name):
+    # Implement me
+    
+    if name.startswith("R") or name.startswith("r"):
+        print("name + ' plays banjo'")
+    else:
+        print("name + 'does not play banjo'")
+
+are_you_playing_banjo("Jordan")'''
+
+
+#Q3 - Code as fast as you can! You need to double the integer and return it.
+def double_integer(i):
+    i = i * 2
+    return i
+
+#Q3 - Sheep Array
+
+'''Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+For example,
+
+[True,  True,  True,  False,
+  True,  True,  True,  True ,
+  True,  False, True,  False,
+  True,  False, False, True ,
+  True,  True,  True,  True ,
+  False, False, True,  True]
+The correct answer would be 17.
+
+Hint: Don't forget to check for bad values like null/undefined'''
+
+
+def count_sheeps(sheep):
+    s_no = sheep.count(True)
+    return s_no
+    
+#Q4 - Basic Mathematical Operations
+'''
+Your task is to create a function that does four basic mathematical operations.
+
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation.
+
+Examples(Operator, value1, value2) --> output
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+('*', 5, 5) --> 25
+('/', 49, 7) --> 7
+'''
+#
+def basic_op(operator, value1, value2):
+    if operator == "+":
+        return value1 + value2
+    elif operator == "-":
+        return value1 - value2
+    elif operator == "*":
+        return value1 * value2
+    elif operator == "/":
+        return value1 / value2
+
+
+#Q5 - Sum Arrays
+'''Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+Examples
+Input: [1, 5.2, 4, 0, -1]
+Output: 9.2
+
+Input: []
+Output: 0
+
+Input: [-2.398]
+Output: -2.398
+
+Assumptions
+You can assume that you are only given numbers.
+You cannot assume the size of the array.
+You can assume that you do get an array and if the array is empty, return 0.
+What We're Testing
+We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
+Advanced users may find this extremely easy and can easily write this in one line.
+'''
+
+def sum_array(a):
+    # initialize a variable to store the sum while iterating through the array later
+    sum = 0
+    # iterate through the array and add each element to the sum variable one at a time
+    for i in a:
+        sum = sum + i
+    return(sum)
+
+
+#Q6 - Will you make it?
+
+'''You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+
+Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+
+Function should return true if it is possible and false if not.
+'''
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    if distance_to_pump > mpg * fuel_left:
+        return False
+    elif distance_to_pump < mpg * fuel_left:
+        return True
+    else:
+        return "Error"
+
+
+#Q7 - Beginner Series #2 Clock
+'''Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+
+Example:
+h = 0
+m = 1
+s = 1
+
+result = 61000
+'''
+
+def past(h, m, s):
+    sum = h * 3600000 + m * 60000 + s * 1000
+    return sum
+
+
+#Q10 - Grasshopper - Personalized Message
+''' Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+Use conditionals to return the proper message:
+
+case	return
+name equals owner	'Hello boss'
+otherwise	'Hello guest'
+'''
+
+def greet(name, owner):
+    if name == owner:
+        return 'Hello boss'
+    else:
+        return 'Hello guest'
+    
